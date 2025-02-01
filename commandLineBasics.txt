@@ -1,0 +1,75 @@
+Below are some fundamentals linux  commands :
+
+1. Navigation commands:
+a. pwd=print the current working directory 
+b. ls=list file in the current directory
+c. ls-l=long listing with details (permissions,size)
+d. ls-a=show hidden files
+e. cd directory_name=change directory
+f. cd..=Move up one directory level
+g. cd/path/to/directory=Move to a specific directory
+h. cd ~ = Move to home directory
+
+2. File and Directory Management
+a. touch filename=creat an empty files
+b. mkdir directory_name=Create a new directory
+c. rm filename=delete a file
+d. rm -r directory_name=delte a directory and its content
+e. cp file1 file2=copy file1 to file2
+f. cp -r dir1 dir2=copy directory1 to directory2
+g. mv file1 file2=Rename or move a file
+
+3. Viewing and editing files
+a. cat filename=view file contents
+b. less filename=view file contents page by page
+c. nano filename=open file in nano editor
+d. vim filename=open file in vim editor
+e. echo "text">file.txt=write text to a file(overwrite)
+f. echo "text">>file.txt=Appext text to a file
+
+4. User and permission Management
+a. whoami=show current user
+b. who=show logged-in user
+c. chomod 777 file=change file permission(777=full access)
+d. chown user :group file=change file ownership
+
+5. Process Management
+a. ps=show runinng Process
+b. top=display sytem Process
+c. kill PID=kill a process with the given PID
+d. pkill process_name=kill process by process_name
+e. htop=Interactive process viewer(if installed)
+
+6. System Information
+a. uname-a=show system details
+b. dh-h=show disk space usage
+c. du-sh directory_name=show directory size
+d. uptime=show system uptime
+e. free -m=show memory usage
+
+7. Network commands
+a. ifconfig=show IP address and network details(depreciated)
+b. ip a=show IP addresses (modern alternative)
+c. ping google.com=Test network connectivity
+d. netstat -tulnp=show open port and listening services
+e. curl http://example.com=fetch a webpage content 
+
+8. Package Management
+a. sudo apt update=update packages lists
+b. sudo apt upgrade=upgrade installed packages
+c. sudo apt install package_name=install a package
+d. sudo apt remove package_name=uninstall a package
+
+9. Searching and finding files
+a. find /.-name filename=search for a file by name
+b. grep"word"file.txt=find a word in a file
+c. grep -r "word" /path/to/directory=search inside all file in a directory
+
+10 Useful shortcuts 
+a. ctrl+c=stopping a running command
+b. ctrl+z=suspend a runing command
+c. ctrl+L=clear the terminal screen
+d. !!=run the last command again 
+e. history =show command history
+
+

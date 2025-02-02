@@ -1,0 +1,41 @@
+1. File System Structure:
+a. /= root directory everything start from here
+b. /home=user home directory(/home/user)
+c. /etc=configuration files
+d. /var=logs,cache and variable data
+e. /tmp=temporary files (deleted on reboot)
+f. /usr=user application and libraries
+g. /bin=essenital system binaries(eg:ls,cp,mv)
+h. /sbin=system administration binaries
+i. /dev=device files (eg:sda for disks)
+j. /mnt or /media=mounted file systems
+
+2. Viewing File system usage
+a. df -h=show disk space usage (humand readable)
+b. du -sh directory_name=show size of a directory
+c. du -sh *=show size of all file/folders in the current directory
+d. lsblk=show information about disk partition
+
+3. file permission and ownership
+a. ls -l filename=checking permission
+b. chmod=changing permission
+c. chmod 644 file=owner.read/write,group/others.read-only
+d. chmod +x script.sh=make a file executable
+e. chown=changing ownership
+f. chown user:group file=change ownership of a file
+g. chown -R user:group directory=change ownership recursively
+
+4. Mounting and unmounting file systems
+a. mount /dev/sdX /mnt=mount a disk to /mnt
+b. unmount /mnt=unmount a disk
+c. blkid=show UUIDs of partitions
+
+5. Working with file systems
+a. mkfs.ext4 /dev/sdX=format a partition with ext4 filesystems
+b. fsck /dev/sdX=check and repair a file system
+c. tune2fs -l /dev/sdX=show file system details
+
+6. searching for a files
+a. find /home -size +100M=find larger file than 100MB
+b. locate file.txt=quickly search for a file (using a pre built database)
+c. updatedb=update the locate database

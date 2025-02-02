@@ -1,0 +1,40 @@
+1. Viewing process
+a. ps=show currently running process
+b. ps aux=detailed process list(user,CPU,memory usage)
+c. top=real time process monitoring
+d. htop=Interactive version of top(installed using sudo apt install htop)
+e. pgrep process_name=find process IDs(PIDs)by name
+
+2. Killing process
+a. kill PID=kill a process using its PID
+b. kill -9 PID=forcefully kill a process
+c. pkill process_name=kill a process by name
+d. killall process_name=kill all processes with the same name
+
+3. Managing process priority
+a. nice -n 10 command=start a process with lower priority
+b. renice -5 -p PID=change priority of a runing process
+c. nice -n -10 command=start a process with higher priority
+// 20(highest priority) to 19(lowest priority)
+// Default priority is 0
+
+4. Foreground and Background process
+a. command &=run command in the Background
+b. jobs=shows backgrund jobs
+c. fg %1=bring job 1 to foreground
+d. bg %1=resume job 1 in the Background
+e. disown -h%1=resume job 1 from the shell's job table(keeps running even if the shell is closed)
+
+5. Monitoring resource usage 
+a. free -m=show memory usage in 100MB
+b. vmstat 2 5=show system perfomance(update every 2sec ,5times)
+c. iostat=show CPU and disk I/O usage
+d. uptime=show system uptime and and load average
+
+6. Managing services(systemd)
+a. systemctl status service_name=check the status of the service 
+b. systemctl start service_name=start a service
+c. systemctl stop service_name=stop a service
+d. systemctl restart service_name=restart a service
+e. systemctl enable service_name=enable service on boot
+f. systemctl disable service_name=disable service from starting on  boot

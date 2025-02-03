@@ -1,0 +1,36 @@
+//condition statement 
+num=10
+if[$num -gt 5];then
+echo "Number is greater than 5"
+else 
+echo "Number is 5 or less"
+fi
+
+// case statement
+echo "Enter a number"
+read num
+case $num in
+1) echo "one";;
+2) echo"Two";;
+3) echo"Invalid Number";;
+esac
+
+// Looping structure-for loop
+for i in{1..5};do 
+echo"Iteration:$i"
+done
+
+//while loop
+count=1
+while[$count -le 5];do
+echo"Iteration:$count"
+((count++))
+done
+
+//until loop
+x=1
+until[$x -gt 5];do
+echo"value :$x"
+((x++))
+done
+

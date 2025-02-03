@@ -1,0 +1,20 @@
+//declaring variables
+name="kul"
+age=25
+echo "My name is $name and i am $age year old"
+
+//Read user input
+echo "Enter your Name"
+read userName
+echo"hello,$userName"
+
+//Environment variables
+echo "Home directory :$Home"
+echo "Current directory:$PWD"
+
+// Arithmetic operations
+num1=10
+num2=5
+sum=$((num1+num2))
+echo "sum:$sum"
+

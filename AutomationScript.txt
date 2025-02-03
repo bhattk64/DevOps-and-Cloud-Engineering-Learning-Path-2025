@@ -1,0 +1,12 @@
+//automating backup
+
+#!/bin/bash
+backup_dir="/backup"
+mkdir -p$backup_dir
+cp -r /home/user/documents $backup_dir
+echo "Backup completed"
+
+//automating system updates
+echo"Updating system.."
+sudo apt update  && sudo apt upgrade -y
+echo"update completed!"

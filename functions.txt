@@ -1,0 +1,13 @@
+//define and calling functions
+
+greet(){
+    echo"Hello,$1"
+}
+greet "Kul"
+
+//function with return value
+sum(){
+    result=$(($1+$2))
+    echo $result
+}
+sum 10 20

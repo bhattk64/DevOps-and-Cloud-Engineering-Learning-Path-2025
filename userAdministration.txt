@@ -1,0 +1,39 @@
+1. Adding and Managing users
+a. adduser username=create a new user with home directory
+b. useradd -m username=create a new user(without setting password)
+c. passwd username=set or change the password of a user
+d. usermod -aG groupname username=add user to a group
+e. usermod -l newname oldname=rename a user
+f. usermod -d /new/home/dir username=change a user's home directory
+g. id username=show user Id(UID)and group id(GID)
+
+2. Removing users
+a. deluser username=delete a user(without removing home directory)
+b. deluser --remove-home username=delete a user and there home directory
+c. userdel -r username=another way to remove a username and home directory
+
+3. Group Management
+a. groupadd groupname=create a new group
+b. groupdel groupname=delete a group
+c. usermod -aG groupname username=add a user to group
+d. gpasswd -d username groupname=remove a user from a group
+e. groups username=list the groups a user belongs to
+
+4. Switching users and Managing privileges
+a. su username=switch to another user 
+b. sudo command=run a command with superuser privileges
+c. sudo -i or sudo su=switch to the root user
+d. whoami=display the current logged user
+e. who=show all logged user
+f. w=show active user and there process
+
+5. Managing permission(file and directory ownership)
+a. chown user file=change file owner
+b. chown user:group file=change file owner and group
+c. chgrp group file=change the group ownership of file 
+d. chmod 755 file=change file permission(read/write/execute)
+
+6. Checking user Information
+a. cat /etc/passwd=show all system users
+b. cat /etc/group=show all groups
+c. getent passwd username=display details of a specific user

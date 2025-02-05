@@ -39,4 +39,10 @@ class parent:
         x=parent("kul","chandra")
         x.printname()
 
-        
+
+#uuse the super()function-after using this you dont have to use the name of parent element it will automatically inherit the method and properties of its parent
+
+class student(parent):
+    def __init__(self, fname, lname):
+        super().__init__(fname, lname)
+

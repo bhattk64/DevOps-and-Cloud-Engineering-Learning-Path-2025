@@ -46,3 +46,33 @@ class student(parent):
     def __init__(self, fname, lname):
         super().__init__(fname, lname)
 
+#python iterators 
+class myNumber():
+    def __iter__(self):
+        self.a=1
+        return self 
+    def __next__(self):
+        x=self.a
+        self.a+=1
+        return x
+myclass=myNumber()
+myiter=iter(myclass)
+print(next(myiter))
+print(next(myiter))
+
+#python polymorphism
+class animal:
+    def sound(self):
+        print("Animal makes a sound")
+class dog(animal):
+    def sound(self):
+        print("Dog barks")
+        class cat(animal):
+            def sound(self):
+                print("Cat meows")
+                d=dog()
+                d.sound()
+                c=cat()
+                c.sound()
+               
+

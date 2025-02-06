@@ -1,4 +1,5 @@
 import numpy as np
+import random 
 arr=np.array([1,2,3,4,5])
 Arr=np.array(['apple','cat'])
 print(arr)
@@ -30,5 +31,8 @@ print('abc'.split('b'))
 #reshape in python
 print(np.arange(0,10).reshape(2,5))
 print(np.arange(0,10).reshape(5,2))
-
+x=random.choice([3,4,5,9],size=(2,1))
+print(x)
+random.shuffle(arr)
+print(arr)
 

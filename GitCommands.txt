@@ -1,0 +1,11 @@
+git init=intialize a repo
+git clone <url>=clone a repo
+git status=check repo status
+git add .=stage all changes
+git commit -m"message"=commit changes
+git push origin <branch>=push to github
+git pull origin <branch>=pull latest changes
+git branch <name>=create a new branch
+git checkout <branch>=switch branch
+git merge <branch>=merge branch 
+git reset --hard HEAD=reset changes

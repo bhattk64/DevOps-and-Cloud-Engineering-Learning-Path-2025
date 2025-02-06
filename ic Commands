@@ -1,0 +1,108 @@
+[33mcommit 661f1a6983926250dc0ef760d7491cf2144167cf[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: kul chandra bhatt <114309808+bhattk64@users.noreply.github.com>
+Date:   Thu Feb 6 15:52:04 2025 +0530
+
+    Numpy
+
+[33mcommit 545f8fda6a28e41a34e111e5eeb35458fdd4dc68[m
+Author: kul chandra bhatt <114309808+bhattk64@users.noreply.github.com>
+Date:   Thu Feb 6 12:11:19 2025 +0530
+
+    Basic of numpy
+
+[33mcommit 533861305d614ae2cfc76cc3c00c1ecc811b122e[m
+Author: kul chandra bhatt <114309808+bhattk64@users.noreply.github.com>
+Date:   Wed Feb 5 11:29:11 2025 +0530
+
+    API integration like get put post request delete
+
+[33mcommit 4144b9276db3c2d359dc11f8d032f3f3a01802df[m
+Author: kul chandra bhatt <114309808+bhattk64@users.noreply.github.com>
+Date:   Wed Feb 5 11:23:45 2025 +0530
+
+    File handling in python
+
+[33mcommit dbf78822e213560fe464d4a97a24a7b27d83b5c8[m
+Author: kul chandra bhatt <114309808+bhattk64@users.noreply.github.com>
+Date:   Wed Feb 5 11:00:12 2025 +0530
+
+    polymorphism
+
+[33mcommit 8cdc17bc557fe8b0d1a963d809359aeb66bf70f3[m
+Author: kul chandra bhatt <114309808+bhattk64@users.noreply.github.com>
+Date:   Wed Feb 5 10:41:39 2025 +0530
+
+    inheritance code
+
+[33mcommit d59c4420f14b4be08dc4d6c30ab36e06c8002449[m
+Author: kul chandra bhatt <114309808+bhattk64@users.noreply.github.com>
+Date:   Tue Feb 4 18:51:39 2025 +0530
+
+    Basics of object oriented programming in python for devops
+
+[33mcommit c249d00533a0c03bb1da095480edf304cea2be6c[m
+Author: kul chandra bhatt <114309808+bhattk64@users.noreply.github.com>
+Date:   Tue Feb 4 11:54:32 2025 +0530
+
+    Basic syntax of python
+
+[33mcommit 28821af874676fa98074a5003f7aa705458bd3e8[m
+Author: kul chandra bhatt <114309808+bhattk64@users.noreply.github.com>
+Date:   Mon Feb 3 11:52:22 2025 +0530
+
+    Automation script in Bash scripting
+
+[33mcommit 81b667ce28f59b17c07495c3ff84e75cf794331e[m
+Author: kul chandra bhatt <114309808+bhattk64@users.noreply.github.com>
+Date:   Mon Feb 3 11:40:22 2025 +0530
+
+    Function in Base Scripting
+
+[33mcommit 0c7ebb4f862a18f4c302ca9497718cc5b85bedf3[m
+Author: kul chandra bhatt <114309808+bhattk64@users.noreply.github.com>
+Date:   Mon Feb 3 11:32:46 2025 +0530
+
+    Control structure in Base scripting
+
+[33mcommit 42f24c6131801b032244aaec2eed756c9aba09cc[m
+Author: kul chandra bhatt <114309808+bhattk64@users.noreply.github.com>
+Date:   Mon Feb 3 11:25:05 2025 +0530
+
+    Variable and Data types in Bash Scripting
+
+[33mcommit ac0bd4c76ad74b141859bb9a9037d49b19b44446[m
+Author: kul chandra bhatt <114309808+bhattk64@users.noreply.github.com>
+Date:   Mon Feb 3 11:03:31 2025 +0530
+
+    User administration usefull commands
+
+[33mcommit 68976e3fae3d7ae0c52e4e11a735d5d580deada0[m
+Author: kul chandra bhatt <114309808+bhattk64@users.noreply.github.com>
+Date:   Sun Feb 2 11:08:50 2025 +0530
+
+    Process management
+
+[33mcommit ad3a1f3a442dba8947c4acddb2d5b71877b73f74[m
+Author: kul chandra bhatt <114309808+bhattk64@users.noreply.github.com>
+Date:   Sun Feb 2 10:15:04 2025 +0530
+
+    File system management
+
+[33mcommit 67ddbcfa1d0e6910e2182bb8ee877acb9153794f[m
+Merge: 8ce0433 b535234
+Author: kul chandra bhatt <114309808+bhattk64@users.noreply.github.com>
+Date:   Sat Feb 1 15:16:50 2025 +0530
+
+    Command line Basics
+
+[33mcommit 8ce0433a5956807e40a350ef4be3b35442d1f8b9[m
+Author: kul chandra bhatt <114309808+bhattk64@users.noreply.github.com>
+Date:   Sat Feb 1 14:59:38 2025 +0530
+
+    Command line Basics
+
+[33mcommit b5352345eabadfd6f354a25a1d267176e2d741dc[m
+Author: kul chandra bhatt <114309808+bhattk64@users.noreply.github.com>
+Date:   Sat Feb 1 14:28:14 2025 +0530
+
+    Initial commit

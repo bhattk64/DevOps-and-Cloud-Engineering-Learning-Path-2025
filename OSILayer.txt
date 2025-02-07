@@ -35,3 +35,8 @@ encoding and decoding of data
 
 7. Application Layer:provides user interaction with the network 
 Handle network services like HTTP,SMTP
+
+
+OSI Model vs TCP/IP Model
+OSI Model=7 layers
+TCP/IP Model=4 layers 

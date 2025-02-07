@@ -1,0 +1,37 @@
+OSI MODEL:The open system interconnection model is a conceptual frmework that standarize network communication accross different systems .
+It is consist of 7 layers
+
+Overview of OSI MODEL:
+
+7. Application=provide network services to application(eg:http)
+6. Presentation=Data encryption,compression
+5. Session=Manages session and connection between application 
+4. Transport=Ensure reliable or fast delivery of Data
+3. Network=Determines IP addressing ,routing and packet forwarding
+2. Data Link=Manages MAC addressing and switches (WIFI,ethernet)
+1. Physical=Deal with hardware ,cables signals 
+
+OSI layers in Detail:
+1. Physical Layer:Responsible for transmissing raw binary data(0s and 1s)over a medium
+Include hardware like cables,fiber optics
+No data interpretation,only singnal transmission(wifi,bluetooth)
+
+2. Data Link Layer:Handles MAC(media access control)addressing
+ensure error detection using CRC(cycle redundancy check)
+Divided into two sublayers(MAC sublayer-control how devices access media,LLC(logical link control)-provides error checking)
+
+3. Network Layer:Responsible for routing packets between network using IP addressing
+uses logical addressing(IPv4/IPv6) to identify devices
+
+4. Transport Layer:Ensures reliable or fast delivery of data
+uses segmentation,flow control and error handling
+TCP(transmission control protocol)-reliable connection,no error checking
+
+5. Session Layer:Manages session establishment maintenance,and termination
+keep track of multiple communication session between system
+
+6. Presentation Layer:convert data into readable format for application
+encoding and decoding of data 
+
+7. Application Layer:provides user interaction with the network 
+Handle network services like HTTP,SMTP

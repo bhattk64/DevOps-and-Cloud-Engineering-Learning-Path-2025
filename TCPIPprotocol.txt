@@ -1,0 +1,7 @@
+TCP/IP protocol known ans internet protocol suite ,is a collection of networkking protocols that works to transfer data packet from one computer to another computer using computer networks 
+It has 4 layers :Application Layers,Transport Layers,Internet Layers,Data Link Layer
+
+1. Application Layers:it is the visible part of the computer network ,it includes all the protocols including interactive program we use over the internet such as web application email
+2. Transport Layers:it is responsible for data packaging including the construction and deconstruction of data into data packets so they can be transported across the network
+3. Internet Layers:it is responsible for sending, routing and receiving  data packets between different networks and devices
+4. Data Link Layer:it is responsible for error-free transfer of data frames between two devices on

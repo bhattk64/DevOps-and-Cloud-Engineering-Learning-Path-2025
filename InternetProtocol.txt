@@ -1,0 +1,10 @@
+They define the rules for communication over network.These protocol enables data transmission security and remote access
+
+2. common internet protocol :
+a. HTTP(Hypertext transfer protocol ):used for web browsing(eg:http://google.com),operate on port 80
+b. HTTPS(Hypertext transfer protocol secure):secure version of HTTP ussing SSL/TLS encryption,protects data from man in the middle attack,operate on port 443
+c. FTP(File transfer protocol):used for file transfering between computers,require aunthentication,operate on port 21
+d. SMTP(Simple mail transfer protocol):used to send emails between mail servers,operate on port 25
+e. DNS(Domain name system):converts Domain name to IP addresses ,operate on port 53
+f. SSH(secure shell):used for secure remote login to a server,operate on port 22
+g. ICMP(internet control message protocol):used for network diagnostics and error reporting , works at network layer(no port number)

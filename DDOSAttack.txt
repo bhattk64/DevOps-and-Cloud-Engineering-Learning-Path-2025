@@ -1,0 +1,5 @@
+Distributed Denial of service attack is a malicious attempt to overload a target system or server or network with heavy traffic making it slow or completely unavailble to users 
+1. Types of DDoS Attacks
+a. Application Layer Attacks:overwhelm web servers or application with fake requests,exhausting servers resources(eg:HTTP flood )
+b. Protocol Attacks:exploit weakness in network protcols to exhaust server resources
+c. Volumetric Attacks:overwhelm network bandwidth with massive amount of traffic

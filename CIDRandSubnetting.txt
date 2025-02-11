@@ -1,0 +1,4 @@
+CIDR-IPV4(classless intern-domain routing):it helps in defining and IP range(10.0.0/16)
+where base Ip is=10.0.0 and subnet mask is /16 
+Base IP defines an IP address contained in the range
+subnet mask defines how many bits can change in the Ip

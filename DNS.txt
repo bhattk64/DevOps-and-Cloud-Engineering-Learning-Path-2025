@@ -1,0 +1,15 @@
+DNS-Domain name system is a protocol that translates human readable domain names(eg:google.com)int IP address(142.245.132.87).It acts like phonebook of the internet alllowin user to access website using domain name instead of numerical IP address.
+DNS working architecture:
+1.user request:you type google.com in browser.
+2.dns resolver:request goes to dns solver
+3.root dns server:resolver asks the root dns server where .com domains are located.
+4.tld server:resolver than queries the top level domain server.
+5.authorative dns server:tld directs the resolver to the authorative dns server for google.com
+6.response:the dns server return the ip address to the browser.
+7.website loads:browser connects to the ip and loads the website
+
+Types of DNS records:
+1.A:maps hostnames to IP addresses
+2.NS:maps domain names to name servers
+3.CNAME:maps domain names to canonical names
+4.AAAA:maps a domain to an IPv6 address

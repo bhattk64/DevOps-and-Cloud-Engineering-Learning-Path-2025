@@ -13,3 +13,11 @@ Types of DNS records:
 2.NS:maps domain names to name servers
 3.CNAME:maps domain names to canonical names
 4.AAAA:maps a domain to an IPv6 address
+
+DHCP (Dynamic Host Configuration Protocol):It is responsible for automatically assigning IP addresses to devices in a network. Without DHCP, you’d need to manually configure IP addresses for each device.
+
+DHCP working flow:
+1. Discovery: A device (client) connects to a network and broadcasts a DHCP request (DHCPDISCOVER).
+2️. Offer: The DHCP server responds with an available IP address lease (DHCPOFFER).
+3️. Request: The client accepts the offered IP by sending a DHCPREQUEST message.
+4️. Acknowledgment: The DHCP server assigns the IP and confirms (DHCPACK).

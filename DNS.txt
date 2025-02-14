@@ -21,3 +21,48 @@ DHCP working flow:
 2️. Offer: The DHCP server responds with an available IP address lease (DHCPOFFER).
 3️. Request: The client accepts the offered IP by sending a DHCPREQUEST message.
 4️. Acknowledgment: The DHCP server assigns the IP and confirms (DHCPACK).
+
+
+Vertical vs. Horizontal Scaling – Key Differences
+
+1. Vertical Scaling (Scaling Up):means adding more resources (CPU, RAM, Storage, etc.) to an existing machine to improve performance.
+It works like Upgrade CPU (e.g., from 4-core to 16-core).
+Increase RAM (e.g., from 8GB to 64GB).
+Upgrade storage (e.g., HDD → SSD → NVMe).
+Move to a larger, more powerful server.
+
+Pros of Vertical Scaling
+✅ Simple Implementation – No need for complex distributed systems.
+✅ Less Maintenance – Fewer machines to manage.
+✅ Easier Data Consistency – No need for load balancing or replication.
+
+Cons of Vertical Scaling
+❌ Hardware Limits – Every machine has a max upgrade limit.
+❌ Single Point of Failure – If the server fails, everything goes down.
+❌ Expensive – High-end servers are costly.
+
+When to Use?
+✔️ For monolithic applications (e.g., traditional databases, single-node applications).
+✔️ When scaling is occasional, and cost is not an issue.
+
+2. Horizontal Scaling (Scaling Out):means adding more machines (nodes) to distribute the load across multiple servers.
+How It Works?
+Add more servers to handle traffic.
+Use load balancers to distribute requests.
+Implement database sharding to split data across multiple nodes.
+Use caching (Redis, Memcached) to reduce database load.
+
+Pros of Horizontal Scaling
+✅ High Availability & Redundancy – If one server fails, others take over.
+✅ Infinite Scalability – No hardware limits; just add more servers.
+✅ Cost-Effective – Can use cheaper, commodity hardware.
+
+Cons of Horizontal Scaling
+❌ Complex Implementation – Requires load balancing, distributed databases, etc.
+❌ Data Synchronization Issues – Need replication strategies (e.g., leader-follower databases).
+❌ More Maintenance – Managing multiple machines is harder.
+
+When to Use?
+✔️ For high-traffic applications (e.g., Google, Facebook, Netflix).
+✔️ When demand is unpredictable (e.g., cloud-based services).
+✔️ For microservices & distributed architectures.

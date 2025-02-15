@@ -66,3 +66,62 @@ When to Use?
 ✔️ For high-traffic applications (e.g., Google, Facebook, Netflix).
 ✔️ When demand is unpredictable (e.g., cloud-based services).
 ✔️ For microservices & distributed architectures.
+
+ Which One Should You Choose?
+✔️ Start with Vertical Scaling if you have a small application.
+✔️ Use Horizontal Scaling when your app outgrows a single machine.
+✔️ Cloud-Based Scaling (Hybrid Approach) – Use auto-scaling cloud services like AWS Auto Scaling, Kubernetes, or Azure Scale Sets for best performance.
+
+What is SSL/TLS?
+🔹 SSL (Secure Sockets Layer) and TLS (Transport Layer Security) are cryptographic protocols that provide secure communication between a client (browser) and a server (website).
+🔹 TLS is the successor of SSL, and TLS 1.2 & TLS 1.3 are the current standards.
+🔹 Websites using HTTPS (https://example.com) have SSL/TLS encryption enabled.
+
+How SSL/TLS Works?
+1️⃣ Client Hello:
+
+The client (browser) sends a request to the server, including supported encryption algorithms and a random value.
+2️⃣ Server Hello:
+
+The server responds with a selected encryption algorithm, its SSL/TLS certificate, and another random value.
+3️⃣ Key Exchange & Authentication:
+
+The client verifies the server's certificate (issued by a Certificate Authority).
+A shared secret key is generated using asymmetric encryption.
+4️⃣ Secure Communication:
+
+Both parties switch to symmetric encryption for fast, secure communication.
+5️⃣ Data Transfer:
+
+Encrypted data is securely exchanged using the shared key.
+6️⃣ Connection Termination:
+
+Once the session ends, keys are discarded to prevent reuse.
+
+Symmetric vs. Asymmetric Encryption
+📌 Symmetric Encryption (Private Key Encryption)
+✔️ Uses a single key for both encryption and decryption.
+✔️ Fast & efficient for large data encryption.
+✔️ Example algorithms: AES, DES, Blowfish, ChaCha20.
+
+🔹 Example Usage:
+
+Encrypting files (openssl aes-256-cbc)
+Secure communication after key exchange in SSL/TLS
+
+Asymmetric Encryption (Public Key Encryption)
+✔️ Uses two keys:
+
+Public Key: Used for encryption
+Private Key: Used for decryption
+✔️ Slower but more secure than symmetric encryption.
+✔️ Example algorithms: RSA, ECC, Diffie-Hellman, DSA.
+🔹 Example Usage:
+
+SSL/TLS handshake
+Digital signatures
+Secure email (PGP encryption)
+
+🚀 How SSL/TLS Uses Both?
+🔹 Asymmetric encryption (RSA, ECC) is used to securely exchange a shared secret key.
+🔹 After the handshake, symmetric encryption (AES, ChaCha20) is used for fast data transfer.

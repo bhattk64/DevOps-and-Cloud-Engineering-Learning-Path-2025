@@ -1,0 +1,7 @@
+RAID:Redundant array independent/inexpensive disks:
+RAID is a data storage virtualization technology that combine multiple hard drives into a single unit for performance improvement fault tolerance or both.
+
+why use RAID:faster read/write speeds,protection against disk failures ,multiple driver act as one 
+
+Types of RAID:
+1. 

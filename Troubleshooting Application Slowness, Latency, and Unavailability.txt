@@ -19,4 +19,10 @@ Common errors:
 #database connection failures:too many connection or downed DB
 
 step3:check server and infrastructure health
-
+step4:check network and latency issues 
+step5:check database bottlenecks 
+step6:check load balancers and reverse proxy 
+step7:check application perfomance(profiling and caching)
+step8:check external dependencies and APIs
+step9:check security and DDos attack
+step10:scalling and perfomance optimization

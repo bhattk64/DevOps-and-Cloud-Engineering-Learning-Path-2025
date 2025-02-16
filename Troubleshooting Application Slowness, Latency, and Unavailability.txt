@@ -1,0 +1,22 @@
+step1:Identify the scope of the problem
+#Is the issue affecting all users or only some?(Global vs Regional vs user specific)
+#Is the entire application slow or just specific features.
+#Is it happening at specific time of day(peak traffic hours?)
+#Has anything changed recently?(Deployment,updates)
+
+step2:check application logs and errors 
+Tools:
+#Application logs :tail -f /var/log/app.log
+#Web server logs: tail -f/var/log/ngnix/access.log
+#Database logs: journalctl -u mysql
+#System logs: dmesg|tail
+#Error tracking tools:Datadog,new relic
+
+Common errors:
+#500 Internal server error-application crash or misconfiguration
+#502 bad gateway -reverse proxy or backend service issue.
+#503 service unavailable -overloaded server
+#database connection failures:too many connection or downed DB
+
+step3:check server and infrastructure health
+

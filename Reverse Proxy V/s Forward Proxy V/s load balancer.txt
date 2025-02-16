@@ -1,0 +1,16 @@
+1.Forward proxy:It sits between a client and the internet.It acts on behalf of the client,forwarding request to the destination server.
+
+working :client connects to proxy instead of directly to the website,proxy forwards the request to the internet,server send the response back to the proxy,which then relays it to the client 
+
+2. Reverse Proxy:It sits in front of servers and handles client request on the behalf.It is commonly used for security load balancing and caching.
+
+working:clients send request to the Reverse proxy instead of the backend servers,proxy forwards the request to the appropriate server,server responds to the proxy which then sends the response back to the client.
+
+3. Load Balancer: it distributes incoming traffic accross multiple backend servers to ensure high Availability and perfomance .
+
+working:client send request to load balancer,the load balancer forwards request to different servers based on configured rules,server processes the request and responds to the load balancer which relays it back to the client .
+
+when to use what?:
+Forward Proxy:user need anonymity and bypass restrictions.
+Reverse Proxy:protect backend server from direct access.
+Load Balancer:Balance high traffic accross multiple servers.

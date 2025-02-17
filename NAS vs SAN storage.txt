@@ -1,0 +1,18 @@
+NAS vs SAN storage:They both are two different approaches to network storage,each has its own usecases,advantage and limitation
+
+1. Network attached storage:It is a dedicated storage device connected to a network that provides  file based storage to multiple clients,Best for file sharing backup solutions.
+
+2. storage area network:it is a high speed network that connects storage device to servers ,providing block level storage for databases virtualization and large application,best for high performance application
+
+when to choose NAS vs SAN?:
+✅ Use NAS if:
+
+You need a simple, cost-effective storage solution
+You want to store and share files over a network
+Your primary use case is backup, media storage, or home office use
+
+✅ Use SAN if:
+
+You need high-performance block storage
+You're running mission-critical applications (e.g., databases, VMs)
+You require low-latency, high-speed connectivity

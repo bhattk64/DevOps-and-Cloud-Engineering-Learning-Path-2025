@@ -4,4 +4,8 @@ RAID is a data storage virtualization technology that combine multiple hard driv
 why use RAID:faster read/write speeds,protection against disk failures ,multiple driver act as one 
 
 Types of RAID:
-1. 
+1. RAID 0 (striping):data is split across drives,if one drive fails all data is lost,best for high speed application
+2. RAID 1(Mirroring):each drive is an exact copy,best for critical databases,half the space is used for redundancy.
+3. RAID 5(striping with parity):data+parity is spread across disks,can survive 1 disk failures,best for file server,web hosting.
+4. RAID 6(Double parity):similar to RAID 5 but with Double parity,can survive 2 disk failures,best for large scale storage solutions.
+5. RAID 10(RAID1+RAID0):combine RAID1 Mirroring with RAID0 striping,best performance +redundancy,best for high speed high availability application.

@@ -1,0 +1,12 @@
+1. Database sharding:sharding is the process of splitting a large database into smaller independent databases to distribute the load.(Each shard handles a subset of the data,increase a scalability by distributing queries across multiple machines,reduce single point of failures)
+Working of sharding:data is partitioned horizontally across multiple services,each shard has a portion of the dataset,A shard key determines which shard hold the data.
+best use case:large scale application(eg:facebook)
+
+2. Database caching:caching storage frequently accessed data in a fast ,in memory system to improve perfomance and reduce database load
+
+Types of caching:
+#application level caching:eg:storing result in memory variables.
+#database query caching:eg:mysql query cache.
+#distributed caching:eg:redis
+
+best use cases:apis that fetchh same data repeatedily

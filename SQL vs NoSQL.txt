@@ -1,0 +1,27 @@
+structured query language(SQL):these are relational databases(RDBMS)that stored data in structured tables and rows and columns.They use query for querying and enforcing strict schema constraints.eg(mysql,oracle,postgresql)
+
+key features of SQL databases:
+1. structured schema:data must follow predefined schema.
+2. ACID compilance:ensure data consistency and reliablity.
+3. Relational model:Table are linked with foreign keys
+4. Scalability:Vertical scaling(adding more power to single server)
+best usecases:Banking  and finance,ecommerce.
+
+Not only SQL(NoSQL):they are non relational and store data in flexible ,unstructured or semi structured formats like key value document coloumn or graph based storage.eg:mongodb.
+best for scalable,flexible and high speed application
+
+📌 When to Choose SQL vs NoSQL?
+
+✅ Use SQL if:
+
+You need strong data integrity & consistency (e.g., banking, finance)
+Your data is highly structured and requires complex queries (JOINs, transactions)
+You’re building an enterprise system (CRM, ERP, HRMS)
+
+
+✅ Use NoSQL if:
+
+You need scalability (handling large amounts of unstructured data)
+Your application has real-time processing needs (social media, analytics)
+You want flexibility in schema (rapid development, dynamic data models)
+

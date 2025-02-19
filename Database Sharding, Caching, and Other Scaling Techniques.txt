@@ -10,3 +10,21 @@ Types of caching:
 #distributed caching:eg:redis
 
 best use cases:apis that fetchh same data repeatedily
+
+3. Database Replication:Replication means copying data from one database to multiple databases for redundancy and load balancing.
+
+Types of Replication:
+Master-slave Replication:one primariy DB writes ,multiple replica read.
+Master-Master Replication:multiple DBs support both ready and writes 
+
+Best use cases:Read heavy application ,high availability systems,disaster recovery.
+
+4.Database partitioning:partitioning splits large tables into smaller pieces to improve performance and manageability.partition can be stored on different servers,query can be optimize for specific partitions 
+
+Types of partitioning:
+Range partitioning:Data is split by ranges
+List partitioning:Data is split by specific values.
+Hash partitioning:Data is split by hash values.
+composite partitioning:A combination of multiple methods.
+
+best use caseS:time series databases,multi region databases

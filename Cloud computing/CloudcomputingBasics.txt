@@ -1,0 +1,11 @@
+DAY1:
+
+Types of cloud computing
+1. IAAS :infrastructure as a service
+2. PAAS:platform as a service
+3. SAAS:software as a service
+
+1. IAAS:Gives full control over infra resources such as virtual machines/storage ,you must take care of all admin task such as patching upgrading backups also,it is pay per use like EC2,VM,GCE. ideal choice for life ans shift migration and legacy application
+2. PAAS:give run time environment/platform to deploy application and development tools,azure take care of all the admin task including automated backups,pay per service model,azure web app,ideal choice where customer doesnt want to handle admin part .
+3. SAAS:give application access to the end userr,azure take care of all the admin tasks,pay per subscribtion model,dropbox,gmail etc,ideal choice where customer can use the standard version of a cloud application
+

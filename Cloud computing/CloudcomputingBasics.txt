@@ -25,3 +25,26 @@ horizontal vs vertical scale:vertical scaling refers to like for eg there is one
 
 #elasticity:similar to scalability ,it automatically escale the cloud whenever there is load on the system and heavy traffic
 #cost effecitveness:1.pricing calculator:estimate price of using azure services,2.TCO(Total cost of ownership): it estimate total saving when migrating to own primeses to cloud
+
+
+DAY3:
+Azure resource hierachy:
+                          Azure account
+                               |
+                            subscriptions(sales dept,IT dept)
+                               |
+                            Resource groups(dev,product)
+                               |
+                            Resources(SQl,Azure)
+It follows top down approach.
+
+Azure Management groups:
+                         Root Management group
+            --------------------------------------------------------------------
+                |              |        |           |               |
+            Human resources    IT     Marketing   EA subscriptions  EA subscriptions
+      -------------             |
+       |                    Production
+      Dev/test subscriptions                ------------------
+                          |            |
+                         Geo region1  Geo region2

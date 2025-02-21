@@ -9,3 +9,19 @@ Types of cloud computing
 2. PAAS:give run time environment/platform to deploy application and development tools,azure take care of all the admin task including automated backups,pay per service model,azure web app,ideal choice where customer doesnt want to handle admin part .
 3. SAAS:give application access to the end userr,azure take care of all the admin tasks,pay per subscribtion model,dropbox,gmail etc,ideal choice where customer can use the standard version of a cloud application
 
+
+DAY2:
+Difference between public cloud private cloud and hybrid cloud:
+1.public cloud:resources are shared among multiple users and customer only pay for the resources they use,hosted and operated by third party such as aws,azure,gcp
+2.private cloud:resources are not share with other organizations providing greater control and security,operated and maintained by a single organization,it may be hosted on premises or in a data center
+3.hybrid cloud:uses both public and private cloud in an interconnected environment,provide extra layer of security ,user can choose which resource to keep in private and which resource to deploy in public 
+
+
+Benefits of cloud computing:
+#High availability and fault tolerance
+#scalability
+
+horizontal vs vertical scale:vertical scaling refers to like for eg there is one vm1 and you will replace all the data to vm2 which is bigger size of vm1 and you completly close the vm1,now horizontal scaling means you will add more vm2 vm3 in vm1(in most of the cases it is prefer)
+
+#elasticity:similar to scalability ,it automatically escale the cloud whenever there is load on the system and heavy traffic
+#cost effecitveness:1.pricing calculator:estimate price of using azure services,2.TCO(Total cost of ownership): it estimate total saving when migrating to own primeses to cloud

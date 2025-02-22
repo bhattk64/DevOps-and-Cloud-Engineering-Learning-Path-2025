@@ -53,3 +53,7 @@ Azure Management groups:
 
 DAY4:
 Learn about basic azure console and create free trail account
+
+DAY5:
+availability zones:many azure zones  provide availability zones ,which are separated groups of datacenters within a region .each has independent power,cooling ,networking infrastructure so that if one zone experiences an outage then regional service,capacity and high availability are supported by the remaining zones
+they are usually within 100km

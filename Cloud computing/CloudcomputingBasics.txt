@@ -48,3 +48,8 @@ Azure Management groups:
       Dev/test subscriptions                ------------------
                           |            |
                          Geo region1  Geo region2
+
+
+
+DAY4:
+Learn about basic azure console and create free trail account

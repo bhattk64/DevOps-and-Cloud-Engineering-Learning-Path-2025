@@ -61,3 +61,6 @@ they are usually within 100km
 DAY6:
 virtual machines:a computer sitting on the cloud that you are renting for your specific uses 
 
+DAY7:
+virtual machine scale sets:it allows automatic scalling of multiple virtual machine based on demand 
+

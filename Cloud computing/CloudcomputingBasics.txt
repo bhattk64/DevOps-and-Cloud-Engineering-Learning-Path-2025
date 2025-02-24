@@ -72,3 +72,6 @@ Azure virtual desktop:uses desktop operating systems like window 10 or 11,design
 Azure virtual machines: can use  either desktop or server operating system,typically intended for only one user at one time ,managed by the customer,pay per user model
 
 DAY 9:
+Azure container instances:
+it is a serverless container solution that lets your docker containers in the cloud without managing virtual machine
+it allows you to deploy and run container directly on azure without needing or orchestron platform like kubernet

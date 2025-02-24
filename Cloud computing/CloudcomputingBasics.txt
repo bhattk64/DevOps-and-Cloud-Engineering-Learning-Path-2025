@@ -64,3 +64,11 @@ virtual machines:a computer sitting on the cloud that you are renting for your s
 DAY7:
 virtual machine scale sets:it allows automatic scalling of multiple virtual machine based on demand 
 
+DAY8:
+Azure virtual desktop:type of managed virtual machine that enables multiple users to access virtual desktops and applications from anywhere using any device.it is a desktop and application virtualization service that run on the cloud ,it provides a scalable and secure solution for remote work and desktop virtualization,secure access through MFA and RBACs
+
+Difference between azure virtual desktop(avd)and azure virtual machines(VMs):
+Azure virtual desktop:uses desktop operating systems like window 10 or 11,designed for many user to access the same desktop, managed by the microsoft take care of maintanenace update,charges per user per month
+Azure virtual machines: can use  either desktop or server operating system,typically intended for only one user at one time ,managed by the customer,pay per user model
+
+DAY 9:

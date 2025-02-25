@@ -89,3 +89,13 @@ more feature like support linux and windows
 DAY12:
 Azure  networking service:
 #azure virtual network:it is cloud based network environment,it allows you to create and managed your own isolated network,these are highly scalable and secure.
+
+DAY13:Azure virtual network peering and virtual private network(VPN):
+azure virtual network(VNet):it is a private,isolated network in azure where you can securely connect and manages vms,database,container and services
+azure virtual network peering:it is a feature that allows you to connect two or more VNets
+azure virtual network(VPN):it is a secure connection between your on premises network and azure virtual network
+
+1a
+2f
+3ae
+4b

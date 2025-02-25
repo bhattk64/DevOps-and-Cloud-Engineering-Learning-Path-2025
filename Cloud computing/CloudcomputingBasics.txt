@@ -75,3 +75,10 @@ DAY 9:
 Azure container instances:
 it is a serverless container solution that lets your docker containers in the cloud without managing virtual machine
 it allows you to deploy and run container directly on azure without needing or orchestron platform like kubernet
+
+DAY10:
+Azure functions:they are event driven serverless compute functions.
+1.event driven:it is executed based on some event,there are different types like http,time based,message from other service
+2. serverless:pay only for execution time 
+3.compute:it is a compute service that can be used to perform some task
+

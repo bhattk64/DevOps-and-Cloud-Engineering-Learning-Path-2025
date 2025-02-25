@@ -82,3 +82,6 @@ Azure functions:they are event driven serverless compute functions.
 2. serverless:pay only for execution time 
 3.compute:it is a compute service that can be used to perform some task
 
+DAY11:
+Azure app service:it is a platform as a service,to build and host application in any programming languages:web app using Azure web apps,background jobs using Azure webjobs,mobile backend using Mobile apps ,restful apis using apis app,it also support automatically scalling and high availability.
+more feature like support linux and windows 

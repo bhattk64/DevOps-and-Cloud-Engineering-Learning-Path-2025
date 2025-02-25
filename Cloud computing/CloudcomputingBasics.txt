@@ -85,3 +85,7 @@ Azure functions:they are event driven serverless compute functions.
 DAY11:
 Azure app service:it is a platform as a service,to build and host application in any programming languages:web app using Azure web apps,background jobs using Azure webjobs,mobile backend using Mobile apps ,restful apis using apis app,it also support automatically scalling and high availability.
 more feature like support linux and windows 
+
+DAY12:
+Azure  networking service:
+#azure virtual network:it is cloud based network environment,it allows you to create and managed your own isolated network,these are highly scalable and secure.

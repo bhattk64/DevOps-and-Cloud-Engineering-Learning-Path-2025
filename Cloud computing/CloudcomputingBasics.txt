@@ -100,3 +100,28 @@ Azure express route:it is a dedicated,private connection between on premises dat
 Benefits of using express route is it doesnt go over public internet
 Azure Domain Name service(DNS):it is a high perfomance scalable and secure domain name system service hosted in azure.
 
+DAY 15:Azure storage accounts ,storage types and storage tiers:
+#Blob storage:used to serving images or document directly to a browser(static website hosting),storing file for distrubuted access,streaming video and audio,also use for storing data for backup and restore disaster recovery and archiving 
+#azure file storage:it enables you to create files shares in the cloud and access these files shares from anywhere with an internect connection,it exposes file share using the server msg block 3.0(SMB)protocol
+once you have created a storage account,you can upload files to azure file storage using the azure portals or tools such as AzCopy utillity 
+attaching a network drive to multiple computers,it has two perfomance tiers .:
+1.The standard tier uses hard disk based hardware in a datacenter
+2. premium tier uses solid state disks.the premium tier offers greater throughout but it is charged at higher rate .
+
+#Azure Queue Storage:it is a cloud-based message queuing service that enables you to send and you can store a massive sem structure data means no SQL data that doesnt  requirre fix schema such as JSON file   
+
+#storage accounts:it is used to store messages,file ,unstructured data,semi structured data.it is highly scalable ,storage account name would be unique within azure 
+#storage  access tiers:
+1. Hot tiers:it is the default tier ,used to access frequetly access data ,provide highest performance but it is costliest,and colliest among there  
+2. cool tier :used for infrequent data access to storage for at least 30 days,cheaper then hot tier,lower perfomance then hot tier,you can migrate your storage from hot tier to coll tier to save storage cost.
+3. Archieve tier:it cannot be set at the account level,used for archievel storage at least 180days,highest latency,take hours for data retrieval,to retrieve a blob from the archieve tier you must change the access tier to hot or cool.the blob will then be rehydrated.you can read the blob only when the rehydration process is complete.cheapest among all
+
+#azure storage redundancy:it ensure data remains available and protested against hardware failure natural disaster and data corruption.
+types of storage redundancy:
+1.Locally rendundant storage:3 copies with single datacenter
+2.zone rendundant storage:3 copies across 3 availability zones in the same region
+3.geo rendundant storage:6 copies(3 local copies+3 in a secondary region)
+4.read-access geo rendundant storage:6 copies(grs)+read access to secondary regions
+5.geo zone rendundant storage:6 copies(3 zone rendundant+3 in secondary region)
+
+

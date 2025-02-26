@@ -95,7 +95,8 @@ azure virtual network(VNet):it is a private,isolated network in azure where you 
 azure virtual network peering:it is a feature that allows you to connect two or more VNets
 azure virtual network(VPN):it is a secure connection between your on premises network and azure virtual network
 
-1a
-2f
-3ae
-4b
+DAY14:Azure express route and Azure DNS:
+Azure express route:it is a dedicated,private connection between on premises data center and azure cloud services bypassing the public internet 
+Benefits of using express route is it doesnt go over public internet
+Azure Domain Name service(DNS):it is a high perfomance scalable and secure domain name system service hosted in azure.
+

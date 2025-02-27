@@ -137,3 +137,13 @@ you can simple import your data from onpremises to either or these  resources.it
 
 #azure file sync:we use file sync when we have to synchornize to file which is local window server and azure files in the azure storage account,this sync process is bydirectional and it is only used to sync only file no blob no data
 
+DAy17:Azure active directory:
+#identity authentication and authorization: 
+In this authentication verifies who you are using credential like username password and then authorization determines what you can do after authentication based on roles and permissions.
+
+#azure active directory:it is centralized identity management and authentication and uses for managing user ,groups and single sign on.
+#azure active directory connect: is is microsoft tool that helps to integrates onpremises active directory with azure active directory .
+it enable hybrid  identity solution allowing user to access on prem and cloud resource with the same credentials .
+
+#azure ad domain service:it provides fully manaed domain service in azure without the need to deploy domain controllers in the cloud.
+It extends on premises active directory functionality to azure allowing application and VMs to use tradiontal authentication and group policy features without  requiring a full active directory setup.

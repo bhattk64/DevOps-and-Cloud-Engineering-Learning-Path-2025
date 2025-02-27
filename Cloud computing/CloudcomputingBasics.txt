@@ -125,3 +125,15 @@ types of storage redundancy:
 5.geo zone rendundant storage:6 copies(3 zone rendundant+3 in secondary region)
 
 
+DAY16:Azure data migration option :
+azure offer multiple ways to migrate databases,application and large scale data on premises,other clouds or different azure services,
+choosing the right migration method depends on the data volume speed security and tolerance
+1.Azure data box:it is physical migration service that helps in transfer or large amount of data to azure .
+it comes with physical appliance such as data box disk (5SSD *8gb)=40TB,also support data box=100TB,also have data box heavy=1PB 
+you can simple import your data from onpremises to either or these  resources.it is reliable fast and secure service.
+
+#Azure file movement  option:
+1.AzCopy:it is a command line based utillity that help you to interact with azure storage to transfer blob files.you can upload,copy,download azure file 
+
+#azure file sync:we use file sync when we have to synchornize to file which is local window server and azure files in the azure storage account,this sync process is bydirectional and it is only used to sync only file no blob no data
+

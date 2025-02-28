@@ -154,3 +154,10 @@ it helps to monitor analyze and optimize cloud spending across azure services .i
 #cost esitimation in azure:
 pricing calculator:estimated cost of provisioning azure resources
 total cost of ownership:cost comparision between on premises and azure infra
+
+DAY19:Azure management and governance :
+#azure blueprints:it deploy a new environment based on all of the requirment setting and configuration of associated artifacts these artifacts include Role assignent,policy assignment,azure resource management template,it also preserve what should be deployed.
+#azure policy:it is service in azure that enables to create assign or manage policy that enforce rules
+#Resource locks:it prevents resourced from accidentaly deleted or modified,it can be apply at different labels .
+#azure resource graph:it is a service that provides a unified view of all azure resources across subscriptions
+

@@ -147,3 +147,10 @@ it enable hybrid  identity solution allowing user to access on prem and cloud re
 
 #azure ad domain service:it provides fully manaed domain service in azure without the need to deploy domain controllers in the cloud.
 It extends on premises active directory functionality to azure allowing application and VMs to use tradiontal authentication and group policy features without  requiring a full active directory setup.
+
+DAY18:Azure cost management:
+it helps to monitor analyze and optimize cloud spending across azure services .it provide visibility into cloud usage and costs allowing bussiness to track budgets prevent overspending and optimize resources for better cost efficiency.
+
+#cost esitimation in azure:
+pricing calculator:estimated cost of provisioning azure resources
+total cost of ownership:cost comparision between on premises and azure infra

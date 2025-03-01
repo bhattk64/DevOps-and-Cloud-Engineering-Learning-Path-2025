@@ -161,3 +161,16 @@ DAY19:Azure management and governance :
 #Resource locks:it prevents resourced from accidentaly deleted or modified,it can be apply at different labels .
 #azure resource graph:it is a service that provides a unified view of all azure resources across subscriptions
 
+DAY20:Tools to interact with azure:
+you can go to portal.azure.com to creat and manage with azure resources.you can also use cloud shell to interact with azure which is browser base shell and support base and powershell
+#azure shell:it is a command line based tool that allows you to interact with azure shell
+#azure cli:it is a command line tool that allows you to interact with azure
+#azure powershell:it is a powershell module that allows you to interact with azure
+#azure SDK:it is a set of libraries and tools that allows you to interact with azure
+
+#azure arc:it manages multi cloud and hybrid virtual machines,kubernets cluster and databases as if they are running in azure.Manages on premises resources as an azure resource.
+
+services supported by azure arc:
+physical server,kubernet cluster,azure data services,sql server,virutal machines
+
+#arm templates:infrastructure as a code service of azure 

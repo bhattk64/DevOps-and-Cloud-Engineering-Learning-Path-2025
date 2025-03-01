@@ -174,3 +174,12 @@ services supported by azure arc:
 physical server,kubernet cluster,azure data services,sql server,virutal machines
 
 #arm templates:infrastructure as a code service of azure 
+
+DAY21:Monitoring tools in azure:
+#azure advisor:evaluate your azure resources and provides you recommendations to help improve reliability ,security,perfomance,achieve operational excellence and help you reduce costs 
+#azure service health:dashboard to show the service health and health of your deployed resources.
+1.azure status:show the status of azure services globally,outages etc.
+2.services health:it focuses on the azure services and regions you are using.
+3.resource health:it focuses on the health of the resources you are using such as VMs.
+
+#azure monitor:it can monitor azure resources like on premises and even data sources 

@@ -1,0 +1,17 @@
+DAY1: Containerization (Docker):
+
+Docker:it is isolated environment with libraries ,application runtime and dependencies.It is lightweight sandbox environment.Everything that is required to run an application like (Build->ship->run)
+
+Understanding Containers V/S Virtual Machines:
+Containers:The underlying hardware is physical server,it has only one OS runs on the host machines ,container engine like software like docker or kubernets that manages containers.each container include only the application and its dependencies but share the host OS kernels .
+Virtual Machines:It has physical hardware like server storage networking.The OS installed on the physical machines eg window,linux.software like VMware ,virtual box that creates and manages multiple VMs and in guest OS ech vm runs its owns operating system which increases overhead ,and each VM has its own library binaries and dependencies to run application
+
+Containers V/S Virtual machines with the help of a Building and House analogy:
+Containers(Building):it is like shared but infrastructure isolated system 
+Virtual Machines(House):it is like operating system isolated infrastructure.
+
+A Simple Docker WorkFlow:
+It starts with a writing a docker file ,which defines the application environment,including the base OS,dependencies and commands to run the application.next you build docker image using docker build,which packages everything into a reusable format then you run a container from this image using docker run which launches the application in an isolated environment.if needed you can push the image to docker hub for sharing or deployment.finally to manage multiple containers you can use docker compose or kubernets for scalling and automations.
+
+Docker Architecture:
+It follows a client server Architecture,the docker client interacts with the docker daemon,which manages container,images networks and storage .the docker daemon runs in the background on the host machine and listens for the command from the client.the docker engine is the core componenet that include daemon,CLI,and API.images are light weight standalone packages contaning application code dependencies and configurations.when an image runs it creates a container an isolated runtime environment.docker also uses registries like docker hub to store share images .this Architecture makes application portable scalable and efficient.

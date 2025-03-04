@@ -128,3 +128,47 @@ Monolithic Applications – Legacy apps that don’t benefit from containerizati
 Resource-Constrained Environments – Not suitable for low-power devices or small VMs.
 Low-Latency Real-Time Systems – Kubernetes introduces some delay due to orchestration overhead.
 Short-Lived Batch Jobs – Simpler container solutions like Docker Swarm may be better.
+
+DAY5:
+
+Kubernetes Architecture Overview:
+Kubernetes is a container orchestration platform designed to manage, scale, and automate containerized applications. Its architecture follows a Master-Worker model, where the Control Plane (Master Node) manages the cluster, and Worker Nodes run the actual applications.
+
+1. Control Plane (Master Node) – Brain of Kubernetes
+The Control Plane manages the cluster and ensures the desired state of applications. It consists of:
+
+1️⃣ API Server (kube-apiserver)
+
+Acts as the entry point for all Kubernetes operations.
+Receives REST API requests and processes them.
+2️⃣ Controller Manager (kube-controller-manager)
+
+Monitors and maintains the cluster’s state (e.g., scaling, node health).
+Includes controllers like ReplicaSet, Node, and Job controllers.
+3️⃣ Scheduler (kube-scheduler)
+
+Assigns Pods to Worker Nodes based on resource availability and constraints.
+4️⃣ ETCD (Distributed Key-Value Store)
+
+Stores cluster configuration and state information.
+Highly available and consistent database.
+
+
+ 2. Worker Nodes – Runs Applications (Pods & Containers)
+Worker Nodes run application workloads and are managed by the Control Plane. Each node has:
+
+1️⃣ Kubelet
+
+Agent running on each worker node.
+Ensures containers are running as expected.
+2️⃣ Container Runtime (Docker, containerd, CRI-O)
+
+Executes and manages containers.
+3️⃣ Kube Proxy (kube-proxy)
+
+Handles networking and communication between services.
+Manages network routing for Pods.
+4️⃣ Pods
+
+The smallest deployable unit in Kubernetes.
+Contains one or more containers.

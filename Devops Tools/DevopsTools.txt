@@ -97,3 +97,34 @@ To view the content of Docker container
 docker inspect
 Cleanup the old docker images from local repo using below command:
 docker image rm image-id
+
+
+DAY4:
+Challenges of Using Standalone Containers:
+1.Manual scaling-you have to manually start,stop,scale containers based on demand.
+2.Networking complexity:Managing communication between multiple containers is difficult.
+3.Load Balancing:Traffic distribution across multiple containers requires manual setup
+4.Fault Tolerance:No built in mechanism to restart failed containers or distribute workloads.
+
+
+How Kubernetes Solves These Challenges :
+1.Automated scaling:Uses the horizontal pod autoscaler to adjust container replicas based on cpu/memory usage.
+2.Built-in Networking – Provides service discovery and inter-container communication via kube-proxy and networking policies.
+3.Load Balancing – Uses Services to automatically distribute traffic among multiple container instances.
+
+
+5 Use Cases Where You Should Use Kubernetes 
+Microservices Architecture – Ideal for managing multiple interdependent services.
+Auto-Scaling Applications – Automatically scales applications based on load.
+Multi-Cloud Deployments – Works across AWS, Azure, GCP, and on-premises.
+CI/CD Pipelines – Supports automated software deployments.
+Big Data & AI Workloads – Handles distributed computing with Spark, TensorFlow, etc.
+
+
+
+5 Use Cases Where You Should NOT Use Kubernetes 
+Small-Scale Applications – Overhead is too high for simple apps.
+Monolithic Applications – Legacy apps that don’t benefit from containerization.
+Resource-Constrained Environments – Not suitable for low-power devices or small VMs.
+Low-Latency Real-Time Systems – Kubernetes introduces some delay due to orchestration overhead.
+Short-Lived Batch Jobs – Simpler container solutions like Docker Swarm may be better.

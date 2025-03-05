@@ -172,3 +172,17 @@ Manages network routing for Pods.
 
 The smallest deployable unit in Kubernetes.
 Contains one or more containers.
+
+
+Other Important Kubernetes Components
+✅ Namespaces – Logical separation of resources within a cluster.
+✅ ConfigMaps & Secrets – Stores configuration and sensitive data.
+✅ Persistent Volumes (PVs) & Persistent Volume Claims (PVCs) – Provides persistent storage.
+✅ Ingress Controller – Manages external access to services using domain names.
+
+How Kubernetes Works?
+1️⃣ User interacts with the API Server (via kubectl, UI, or API).
+2️⃣ Scheduler assigns workloads (Pods) to Worker Nodes.
+3️⃣ Kubelet ensures containers run on the assigned nodes.
+4️⃣ Kube Proxy manages networking between Pods and external users.
+5️⃣ Controller Manager ensures the desired state (self-healing, scaling, etc.).

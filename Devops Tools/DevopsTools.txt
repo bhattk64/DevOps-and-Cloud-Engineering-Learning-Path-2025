@@ -186,3 +186,12 @@ How Kubernetes Works?
 3️⃣ Kubelet ensures containers run on the assigned nodes.
 4️⃣ Kube Proxy manages networking between Pods and external users.
 5️⃣ Controller Manager ensures the desired state (self-healing, scaling, etc.).
+
+
+DAY6:
+first learn to install kubectl,and kind cluster .
+Below domains and all of its sub-domains are allowed to be referred in the exam
+
+https://kubernetes.io/docs
+https://kubernetes.io/blog/
+Kubernetes cheat sheet : https://kubernetes.io/docs/reference/kubectl/quick-reference/

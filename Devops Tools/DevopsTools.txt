@@ -217,4 +217,30 @@ spec:
   - name: nginx-container
     image: nginx
     ports:
-    - containerPort: 80
+    - containerPort: 80 
+
+Task done for DAY7:
+1. Create a pod using the imperative command and use nginx as the image:
+kubectl run nginx-pod --image=nginx --restart=Never
+
+2. Create the YAML from the nginx pod created in task 1
+Update the pod name in the YAML
+Use that YAML to create a new pod with the name nginx-new.:
+
+Step 1: Generate YAML from the existing pod:
+kubectl get pod nginx-pod -o yaml > nginx-pod.yaml
+
+Step 2: Modify the YAML:
+nano nginx-pod.yaml
+
+
+Step 3: Create a new pod from the updated YAML:
+kubectl apply -f nginx-pod.yaml
+
+
+Step 4: Verify the new pod is running:
+kubectl get pods
+
+
+
+

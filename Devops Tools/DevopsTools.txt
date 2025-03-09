@@ -243,4 +243,6 @@ kubectl get pods
 
 
 
-
+DAY8:
+Replication controller in kubernetes:
+it ensures that a specified number of pod replicas are running at all times .it monitor the pods and replaces failed or terminated ones to maintain the desired state

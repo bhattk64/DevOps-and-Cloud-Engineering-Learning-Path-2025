@@ -246,3 +246,71 @@ kubectl get pods
 DAY8:
 Replication controller in kubernetes:
 it ensures that a specified number of pod replicas are running at all times .it monitor the pods and replaces failed or terminated ones to maintain the desired state
+
+Task :
+1. Create a ReplicaSet with 3 Replicas:
+Create a file named nginx-replicaset.yaml and add the following content:
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginx-rs
+spec:
+  replicas: 3  # Initially, 3 replicas
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+
+Apply the yaml file : kubectl apply -f nginx-replicaset.yaml
+
+Deployement:
+Step 1: Create a Deployment with 3 Replicas
+Create a file named nginx-deployment.yaml and add the following content:
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+  labels:
+    tier: backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: v1
+  template:
+    metadata:
+      labels:
+        app: v1
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.23.0
+Apply the YAML file:kubectl apply -f nginx-deployment.yaml
+
+Step 2: List the Deployment and Verify Replicas
+kubectl get deployments
+kubectl get pods -l app=v1
+
+Step 3: Update the Image to nginx:1.23.4:
+kubectl set image deployment/nginx nginx=nginx:1.23.4
+
+Step 4: Assign the Change Cause:
+kubectl annotate deployment/nginx kubernetes.io/change-cause="Pick up patch version"
+
+Step 5: Scale the Deployment to 5 Replicas
+kubectl scale deployment/nginx --replicas=5
+
+
+Step 6: Check Deployment Rollout History:
+kubectl rollout history deployment/nginx
+
+Step 7: Rollback to Revision 1
+kubectl rollout undo deployment/nginx --to-revision=1
+

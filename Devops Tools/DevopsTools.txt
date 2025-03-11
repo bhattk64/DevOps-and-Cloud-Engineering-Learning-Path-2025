@@ -314,3 +314,6 @@ kubectl rollout history deployment/nginx
 Step 7: Rollback to Revision 1
 kubectl rollout undo deployment/nginx --to-revision=1
 
+Verify the image:
+kubectl get pods -o jsonpath='{.items[*].spec.containers[*].image}'
+

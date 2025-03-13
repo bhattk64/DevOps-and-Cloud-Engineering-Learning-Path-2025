@@ -343,3 +343,27 @@ spec:
   selector:
     matchLabels:
       env: demo
+
+  Apply the below YAML and fix the issue with it
+apiVersion: v1
+kind:  Deployment
+metadata:
+  name: nginx-deploy
+  labels:
+    env: demo
+spec:
+  template:
+    metadata:
+      labels:
+        env: demo
+      name: nginx
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        ports:
+        - containerPort: 80
+  replicas: 3
+  selector:
+    matchLabels:
+      env: dev

@@ -367,3 +367,29 @@ spec:
   selector:
     matchLabels:
       env: dev
+
+
+
+
+DAY9:
+
+Pre-requisite for Kind cluster
+If you use a Kind cluster, you must perform the port mapping to expose the container port. Use the below config to create a new Kind cluster
+
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes:
+- role: control-plane
+  extraPortMappings:
+  - containerPort: 30001
+    hostPort: 30001
+- role: worker
+- role: worker
+
+
+command to create new cluster
+
+ kind create cluster --config kind.yaml --name cka-cluster
+
+What is Service in Kubernetes
+Different applications communicate with each other within Kubernetes using a service; it is also used to access applications outside the cluster.

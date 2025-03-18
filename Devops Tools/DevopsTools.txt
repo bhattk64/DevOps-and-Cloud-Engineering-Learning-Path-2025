@@ -457,3 +457,95 @@ metadata:
 spec:
   type: ExternalName
   externalName: my.api.example.com
+
+
+Task Day9:
+
+1. Create a Service named myapp of type ClusterIP
+A ClusterIP service is accessible only within the cluster.
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp
+spec:
+  selector:
+    app: myapp
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: ClusterIP
+
+  Apply the YAML:kubectl apply -f myapp-service.yaml
+
+  Verify:kubectl get svc myapp
+
+  2.Create a Deployment named myapp
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.23.4-alpine
+        ports:
+          - containerPort: 80
+
+
+Apply:kubectl apply -f myapp-deployment.yaml
+
+
+Verify:
+kubectl get deployments myapp
+kubectl get pods -l app=myapp
+
+
+3.Scale the Deployment to 2 replicas
+kubectl scale deployment myapp --replicas=2
+
+
+Verify:
+kubectl get deployments myapp
+kubectl get pods -l app=myapp
+
+
+4.Create a temporary Pod using busybox and test the service
+kubectl run test-pod --image=busybox -it --rm -- /bin/sh
+
+
+Inside the busybox shell, run:wget -qO- http://myapp
+
+
+Exit the pod:exit
+
+
+5.Run a wget command against the service from outside the cluster
+Since the service is ClusterIP, it won’t be accessible externally.
+Try this on your local machine:
+wget http://<cluster-ip-of-myapp>
+
+This will fail.
+To get the ClusterIP:kubectl get svc myapp -o wide
+
+
+6.Change the Service type to expose it externally
+
+Modify myapp-service.yaml and change the service type to NodePort:
+type: NodePort
+Apply the change:
+kubectl apply -f myapp-service.yaml
+Verify:kubectl get svc myapp -o wide
+
+
+Find the NodePort (e.g., 31234). Access it externally:wget http://<node-ip>:<node-port>
+

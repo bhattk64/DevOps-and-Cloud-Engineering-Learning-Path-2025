@@ -549,3 +549,28 @@ Verify:kubectl get svc myapp -o wide
 
 Find the NodePort (e.g., 31234). Access it externally:wget http://<node-ip>:<node-port>
 
+
+
+DAY10:
+What is a Namespace in Kubernetes
+Provides isolation of resources
+Avoid accidental deletion/modification
+Separated by resource type or environment or domain and so on
+Resources can access each other in the same namespace with their first name by the DNS name for other namespaces
+
+Day10 Task:
+
+Step 1: Create Two Namespaces (ns1 and ns2)
+kubectl create namespace ns1
+kubectl create namespace ns2
+
+Step 2: Deploy Nginx in Both Namespaces
+kubectl create deployment deploy-ns1 --image=nginx --replicas=1 -n ns1
+kubectl create deployment deploy-ns2 --image=nginx --replicas=1 -n ns2
+
+Step 3: Get the IP Address of Each Pod
+kubectl get pods -o wide -n ns1
+kubectl get pods -o wide -n ns2
+
+Step 4: Exec into deploy-ns1 Pod and Curl deploy-ns2 Pod
+kubectl exec -it <pod-name-in-ns1> -n ns1 -- curl <pod-ip-in-ns2>

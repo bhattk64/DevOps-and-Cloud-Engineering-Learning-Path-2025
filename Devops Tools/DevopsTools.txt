@@ -574,3 +574,40 @@ kubectl get pods -o wide -n ns2
 
 Step 4: Exec into deploy-ns1 Pod and Curl deploy-ns2 Pod
 kubectl exec -it <pod-name-in-ns1> -n ns1 -- curl <pod-ip-in-ns2>
+
+
+Scaling Deployments
+Step 5: Scale Deployments to 3 Replicas
+kubectl scale deployment deploy-ns1 --replicas=3 -n ns1
+kubectl scale deployment deploy-ns2 --replicas=3 -n ns2
+
+
+Creating Services
+Step 6: Expose the Deployments as Services
+kubectl expose deployment deploy-ns1 --type=ClusterIP --port=80 --name=svc-ns1 -n ns1
+kubectl expose deployment deploy-ns2 --type=ClusterIP --port=80 --name=svc-ns2 -n ns2
+
+
+Step 7: Get Service IPs and Curl from Pods
+kubectl get svc -n ns1
+kubectl get svc -n ns2
+kubectl exec -it <pod-name-in-ns1> -n ns1 -- curl <svc-ns2-IP>
+kubectl exec -it <pod-name-in-ns2> -n ns2 -- curl <svc-ns1-IP>
+
+
+Using FQDN
+Step 8: Try Curling Using Service Name (Fails)
+kubectl exec -it <pod-name-in-ns1> -n ns1 -- curl svc-ns2
+(This fails because DNS resolution is namespace-specific)
+
+Step 9: Try Curling Using FQDN (Works)
+kubectl exec -it <pod-name-in-ns1> -n ns1 -- curl svc-ns2.ns2.svc.cluster.local
+kubectl exec -it <pod-name-in-ns2> -n ns2 -- curl svc-ns1.ns1.svc.cluster.local
+(FQDN format: <service-name>.<namespace>.svc.cluster.local)
+
+
+Cleanup
+Step 10: Delete Namespaces (Deletes Everything Inside)
+kubectl delete namespace ns1
+kubectl delete namespace ns2
+This will remove all related Deployments, Services, and Pods

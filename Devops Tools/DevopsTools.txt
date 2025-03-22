@@ -662,3 +662,39 @@ spec:
          echo waiting for myservice;
          sleep 2;
         done;
+
+
+Task DAY11:
+
+Create a Multi-Container Pod in Kubernetes:
+A multi-container pod in Kubernetes is a pod that runs multiple containers within the same pod. These containers share storage, network, and lifecycle.
+
+1. Create a YAML File for Multi-Container Pod
+Create a file named multi-container-pod.yaml and add the following content:
+apiVersion: v1
+kind: Pod
+metadata:
+  name: multi-container-pod
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+  - name: sidecar-container
+    image: busybox
+    command: ["sh", "-c", "while true; do echo Sidecar container is running; sleep 5; done"]
+
+2. Apply the YAML File
+kubectl apply -f multi-container-pod.yaml
+
+
+3. Verify the Pod is Running
+kubectl get pods
+
+4. Check Logs for Both Containers
+kubectl logs multi-container-pod -c nginx-container
+kubectl logs multi-container-pod -c sidecar-container
+
+5. Exec Into the Sidecar Container
+kubectl exec -it multi-container-pod -c sidecar-container -- sh

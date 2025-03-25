@@ -736,3 +736,79 @@ spec:
   selector:
     matchLabels:
       env: demo
+
+Task Day12:
+1. Create a DaemonSet
+A DaemonSet ensures that a pod runs on every node in the cluster. This is useful for logging, monitoring, or running system-level services.
+
+Create a YAML file for DaemonSet (daemonset.yaml):
+yaml
+Copy
+Edit
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: my-daemonset
+spec:
+  selector:
+    matchLabels:
+      name: my-daemonset
+  template:
+    metadata:
+      labels:
+        name: my-daemonset
+    spec:
+      containers:
+      - name: busybox-container
+        image: busybox
+        command: ["sh", "-c", "while true; do echo DaemonSet running; sleep 10; done"]
+        
+Apply the DaemonSet:
+kubectl apply -f daemonset.yaml
+
+Verify DaemonSet is running on all nodes:
+kubectl get daemonsets
+kubectl get pods -o wide
+Delete DaemonSet when done:
+
+kubectl delete daemonset my-daemonset
+
+
+2. Create a CronJob in Kubernetes
+A CronJob runs periodic tasks in Kubernetes, similar to a Linux cron job.
+
+Understanding Cron Syntax:
+The cron syntax follows this pattern:
+
+Minute Hour Day Month DayOfWeek Command
+For example, */5 * * * * means every 5 minutes.
+
+Create a YAML file for CronJob (cronjob.yaml):
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: print-message
+spec:
+  schedule: "*/5 * * * *"  # Runs every 5 minutes
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: busybox-container
+            image: busybox
+            command: ["sh", "-c", "echo 40daysofkubernetes"]
+          restartPolicy: OnFailure
+
+
+Apply the CronJob:
+kubectl apply -f cronjob.yaml
+
+Verify the CronJob:
+kubectl get cronjob
+kubectl get jobs
+kubectl logs -l job-name=print-message
+
+
+Delete CronJob when done:
+kubectl delete cronjob print-message

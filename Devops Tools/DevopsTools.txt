@@ -812,3 +812,26 @@ kubectl logs -l job-name=print-message
 
 Delete CronJob when done:
 kubectl delete cronjob print-message
+
+
+DAY13:
+Labels 🏷️
+Labels are key-value pairs attached to Kubernetes objects like pods, services, and deployments. They help organize and group resources based on criteria that make sense to you.
+
+Examples of Labels:
+
+environment: production
+type: backend
+tier: frontend
+application: my-app
+Selectors 🔍
+Selectors filter Kubernetes objects based on their labels. This is incredibly useful for querying and managing a subset of objects that meet specific criteria.
+
+Common Usage:
+
+Pods: kubectl get pods --selector app=my-app
+Deployments: Used to filter the pods managed by the deployment.
+Services: Filter the pods to which the service routes traffic.
+Labels vs. Namespaces 🌍
+Labels: Organize resources within the same or across namespaces.
+Namespaces: Provide a way to isolate resources from each other within a cluster.

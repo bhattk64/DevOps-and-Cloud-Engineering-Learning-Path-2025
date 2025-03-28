@@ -881,3 +881,78 @@ spec:
     image: nginx
 
 Note: Kubernetes will place the pod on worker-node-1 with the above configuration.
+
+Task DAY14:
+
+1. Create a Pod and Schedule it Manually Without the Scheduler
+By default, the Kubernetes scheduler assigns pods to nodes automatically. However, you can manually schedule a pod by specifying the nodeName field in the pod definition.
+
+Step 1: Create a YAML file for the manually scheduled Pod (manual-pod.yaml)
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: manual-scheduled-pod
+spec:
+  nodeName: <your-node-name>  # Replace with the actual node name
+  containers:
+  - name: nginx-container
+    image: nginx
+    ports:
+    - containerPort: 80
+
+ Find your node name using:
+
+ kubectl get nodes
+
+Step 2: Apply the YAML file to create the Pod
+
+kubectl apply -f manual-pod.yaml
+
+Step 3: Verify the Pod is running on the assigned node
+
+kubectl get pods -o wide
+
+2. Restart Control Plane Components by Modifying Static Pod Manifests
+Static pods are managed directly by the kubelet on the control plane node. The configuration files for these pods are stored in the static pod manifest directory.
+
+Step 1: SSH into the Control Plane Node
+ssh <control-plane-node>
+
+Step 2: Navigate to the Static Pod Manifest Directory
+cd /etc/kubernetes/manifests/
+
+Step 3: List the Static Pod Manifests
+ls -l
+
+You should see YAML files for control plane components like:
+
+kube-apiserver.yaml
+
+kube-controller-manager.yaml
+
+kube-scheduler.yaml
+
+etcd.yaml
+
+Step 4: Restart Control Plane Components
+You can restart a component by modifying its static pod manifest. For example, restart the API Server by touching its file:
+
+touch kube-apiserver.yaml
+
+
+This triggers the kubelet to restart the component.
+
+Alternatively, delete and recreate a static pod:
+
+mv kube-apiserver.yaml kube-apiserver.yaml.bak
+sleep 5
+mv kube-apiserver.yaml.bak kube-apiserver.yaml
+
+Step 5: Verify Control Plane Components
+Check if the control plane components restarted successfully:
+
+kubectl get pods -n kube-system
+
+Step 6: Exit the Control Plane Node
+exit

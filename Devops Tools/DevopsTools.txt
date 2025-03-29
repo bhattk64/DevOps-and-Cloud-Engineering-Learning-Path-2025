@@ -956,3 +956,64 @@ kubectl get pods -n kube-system
 
 Step 6: Exit the Control Plane Node
 exit
+
+Step 1: Create the YAML file for the 3 Pods
+Create a file named pods.yaml with the following content:
+
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod1
+  labels:
+    env: test
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod2
+  labels:
+    env: dev
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod3
+  labels:
+    env: prod
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx
+
+
+Step 2: Apply the YAML file to create the Pods
+
+kubectl apply -f pods.yaml
+
+
+Step 3: Verify the Pods and Their Labels
+
+kubectl get pods --show-labels
+
+Step 4: Filter Pods Based on Labels
+
+Filter Pods with the label env=dev
+
+kubectl get pods -l env=dev
+Filter Pods with the label env=prod
+
+kubectl get pods -l env=prod
+Filter Pods with either env=dev OR env=prod
+
+kubectl get pods -l 'env in (dev,prod)'

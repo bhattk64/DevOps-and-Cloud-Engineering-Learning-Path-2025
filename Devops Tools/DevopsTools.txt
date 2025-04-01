@@ -1065,3 +1065,32 @@ Labels group nodes based on size, type,env, etc. Unlike taints, labels don't dir
 
 Limitations to Remember 🚧
 Taints and tolerations are powerful tools, but they have limitations. They cannot handle complex expressions like "AND" or "OR." So, what do we use in that case? We use a combination of Taints, tolerance, and Node affinity, which we will discuss in the next day.
+
+
+DAY14 TASK:
+
+Step 1: Taint the Worker Nodes
+You need to taint the worker nodes to restrict scheduling based on GPU availability.
+
+kubectl taint nodes worker01 gpu=true:NoSchedule
+kubectl taint nodes worker02 gpu=false:NoSchedule
+
+gpu=true:NoSchedule on worker01 means that only pods with a toleration for gpu=true can be scheduled here.
+
+gpu=false:NoSchedule on worker02 means that only pods with a toleration for gpu=false can be scheduled here.
+
+Step 2: Create a New Pod Without Tolerations
+Create a pod using the nginx image.
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+
+  Apply this configuration:
+
+kubectl apply -f nginx-pod.yaml

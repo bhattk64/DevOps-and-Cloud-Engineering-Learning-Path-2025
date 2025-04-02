@@ -1094,3 +1094,47 @@ spec:
   Apply this configuration:
 
 kubectl apply -f nginx-pod.yaml
+
+Step 6: Verify Pod Scheduling
+Check if the pod is running:
+
+kubectl get pods -o wide
+
+Now, the pod should get scheduled on one of the worker nodes since it tolerates the taints.
+
+Step 7: Create a Pod with a Toleration for gpu=true:NoSchedule
+Since worker01 has the taint gpu=true:NoSchedule, we need to ensure that the pod has a matching toleration.
+
+Create a YAML file (nginx-pod.yaml) with the following content:
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+spec:
+  tolerations:
+    - key: "gpu"
+      operator: "Equal"
+      value: "true"
+      effect: "NoSchedule"
+  containers:
+    - name: nginx
+      image: nginx
+This ensures that the pod will only be scheduled on nodes with gpu=true:NoSchedule, which means it should now run on worker01.
+
+
+Step 8: Apply the Pod Configuration
+Run the following command to create the pod:
+
+kubectl apply -f nginx-pod.yaml
+
+Step 9: Verify Pod Scheduling
+Check where the pod is running:
+
+kubectl get pods -o wide
+If everything is correct, you should see the pod running on worker01.
+
+You can further verify it by describing the pod:
+
+kubectl describe pod nginx-pod
+Look for the Node field in the output, and it should show worker01.

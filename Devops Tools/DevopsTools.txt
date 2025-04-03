@@ -1138,3 +1138,43 @@ You can further verify it by describing the pod:
 
 kubectl describe pod nginx-pod
 Look for the Node field in the output, and it should show worker01.
+
+step10:Remove the Taint from the Control Plane Node
+To delete the taint on the control plane node, first, check the existing taints:
+
+kubectl get nodes -o json | jq '.items[].spec.taints'
+Then, remove the taint using:
+
+kubectl taint nodes <control-plane-node-name> node-role.kubernetes.io/control-plane:NoSchedule-
+Note: Replace <control-plane-node-name> with the actual name of your control plane node.
+
+
+Step 11: Create a Pod with the Redis Image
+Now, create a new Pod that will be scheduled on the control plane node.
+
+Create a YAML file (redis-pod.yaml):
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis-pod
+spec:
+  containers:
+    - name: redis
+      image: redis
+Apply the YAML:
+
+kubectl apply -f redis-pod.yaml
+Verify the pod is running on the control plane node:
+
+kubectl get pods -o wide
+
+
+Step 12: Add the Taint Back to the Control Plane Node
+Once the pod is scheduled, reapply the taint:
+
+kubectl taint nodes <control-plane-node-name> node-role.kubernetes.io/control-plane:NoSchedule
+
+Verify the taint is added back:
+
+kubectl describe node <control-plane-node-name> | grep Taints

@@ -1231,3 +1231,53 @@ spec:
                 operator: In
                 values:
                 - ssd
+
+
+DAY 15 TASK:
+Step 1: Create the Pod YAML
+Create a file named nginx-affinity-pod.yaml with the following content:
+
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-affinity-pod
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: disktype
+                operator: In
+                values:
+                  - ssd
+  containers:
+    - name: nginx
+      image: nginx
+✅ Step 2: Apply the YAML
+
+kubectl apply -f nginx-affinity-pod.yaml
+
+
+✅ Step 3: Check Pod Status
+
+kubectl get pods
+kubectl describe pod nginx-affinity-pod
+You’ll likely see something like this in the Events section:
+
+
+0/3 nodes are available: 3 node(s) didn't match node affinity/selector terms.
+🤔 Why is the Pod not scheduled?
+The pod is not scheduled because no node has the label disktype=ssd.
+
+✅ Step 4 (Optional): Fix by labeling a node
+Label one of your nodes with disktype=ssd:
+
+
+kubectl label node <your-node-name> disktype=ssd
+
+
+Then the pod should get scheduled successfully:
+
+kubectl get pods -o wide

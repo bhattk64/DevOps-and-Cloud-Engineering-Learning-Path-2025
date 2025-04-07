@@ -1281,3 +1281,31 @@ kubectl label node <your-node-name> disktype=ssd
 Then the pod should get scheduled successfully:
 
 kubectl get pods -o wide
+
+✅ Step 5: Label worker01 Node
+Run the following command to label worker01 with disktype=ssd:
+
+
+kubectl label node worker01 disktype=ssd
+
+
+You can verify it with:
+
+
+kubectl get nodes --show-labels
+
+Look for disktype=ssd on worker01.
+
+✅ Step 6: Check Pod Status
+Now, check the pod you created earlier:
+
+kubectl get pods -o wide
+
+You should see that the pod is now scheduled on worker01.
+
+To confirm the node it's running on:
+
+kubectl describe pod nginx-affinity-pod | grep -i node
+Output should show:
+
+Node:         worker01/...

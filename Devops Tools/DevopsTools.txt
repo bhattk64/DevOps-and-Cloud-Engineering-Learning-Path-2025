@@ -1309,3 +1309,42 @@ kubectl describe pod nginx-affinity-pod | grep -i node
 Output should show:
 
 Node:         worker01/...
+
+step7. Label worker02 with disktype and no value
+kubectl label node worker02 disktype-
+kubectl label node worker02 disktype=""
+💡 The first command removes any existing disktype label, and the second sets an empty value for the disktype key.
+
+Verify it:
+
+kubectl get nodes --show-labels
+You should see something like:
+
+
+worker02   ...   disktype=
+✅ step 8. Create a Pod YAML with redis image and nodeAffinity that matches key disktype with no value
+Here’s the YAML:
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod2
+spec:
+  containers:
+    - name: redis
+      image: redis
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: disktype
+                operator: Exists
+Save it as pod2.yaml and apply:
+
+kubectl apply -f pod2.yaml
+
+✅ step 9. Verify the Pod is scheduled on worker02
+kubectl get pod pod2 -o wide
+
+Look under the NODE column — it should show worker02.

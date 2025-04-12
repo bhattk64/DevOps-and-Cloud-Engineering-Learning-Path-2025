@@ -1403,3 +1403,22 @@ spec:
         memory: "200Mi"
     command: ["stress"]
     args: ["--vm", "1", "--vm-bytes", "150M", "--vm-hang", "1"]
+
+
+
+DAY16 TASK:
+
+✅ Step 1: Create a Namespace
+kubectl create namespace mem-example
+
+You can verify it:
+kubectl get ns
+
+✅ Step 2: Install Metrics Server
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+ Make sure your cluster allows anonymous TLS access or edit the deployment with appropriate flags (especially for Kind or Minikube).
+
+ ✅ Step 3: Verify Metrics Server is Working
+ kubectl top nodes
+kubectl top pods --all-namespaces
+If you see CPU and memory usage, you're good to go!

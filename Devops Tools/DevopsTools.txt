@@ -1422,3 +1422,6 @@ kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/late
  kubectl top nodes
 kubectl top pods --all-namespaces
 If you see CPU and memory usage, you're good to go!
+
+Perform the steps given in the below doc:
+https://kubernetes.io/docs/tasks/configure-pod-container/assign-memory-resource/#specify-a-memory-request-and-a-memory-limit

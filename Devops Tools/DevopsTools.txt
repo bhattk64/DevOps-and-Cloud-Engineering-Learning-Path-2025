@@ -1425,3 +1425,17 @@ If you see CPU and memory usage, you're good to go!
 
 Perform the steps given in the below doc:
 https://kubernetes.io/docs/tasks/configure-pod-container/assign-memory-resource/#specify-a-memory-request-and-a-memory-limit
+
+
+DAY17:
+
+Scaling types
+
+scale out/in Horizontal Autoscaling      Vertical Autoscaling scale up/down
+Workload(pods)  Infra(nodes)              Workload(pods)       Infra(nodes)
+HPA            Cluster Autoscaler          VPA                Node AutoProvisioning
+
+
+Event based autoscaling: KEDA
+Cron/Schedule based autoscaling
+

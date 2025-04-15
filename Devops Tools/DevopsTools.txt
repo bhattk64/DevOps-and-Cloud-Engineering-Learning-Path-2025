@@ -1439,3 +1439,27 @@ HPA            Cluster Autoscaler          VPA                Node AutoProvision
 Event based autoscaling: KEDA
 Cron/Schedule based autoscaling
 
+
+
+HPA v/s VPA
+
+
+POD       POD        POD            Node 
+cpu=l    cpu=l       cpu=l            horizontal
+memory=1  memory=1    memory=1        pod autoscaling
+
+ 
+POD                                Node                     
+cpu=10                             vertical
+memory=10                         pod autoscaling
+
+
+
+Sample commands used in the video:
+kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
+
+kubectl run -i --tty load-generator --rm --image=busybox:1.28 --restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- http://php-apache; done"
+
+kubectl get hpa php-apache --watch
+
+kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10

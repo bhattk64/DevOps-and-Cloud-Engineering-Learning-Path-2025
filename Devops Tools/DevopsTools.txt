@@ -1467,7 +1467,7 @@ kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
 
 
 Sample YAML used in the video
-Deploy.yaml
+1. Deploy.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -1503,3 +1503,24 @@ spec:
   - port: 80
   selector:
     run: php-apache
+
+
+2. hpa.yaml
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: php-apache
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: php-apache
+  minReplicas: 1
+  maxReplicas: 10
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 50

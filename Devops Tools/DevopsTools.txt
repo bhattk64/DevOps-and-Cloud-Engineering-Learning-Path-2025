@@ -1524,3 +1524,31 @@ spec:
       target:
         type: Utilization
         averageUtilization: 50
+
+
+  DAY 17 task:
+
+  ✅ 1. Create a new namespace (optional but recommended for isolation)
+
+kubectl create namespace mem-example
+kubectl config set-context --current --namespace=mem-example
+
+
+✅ 2. Deploy the application using the given Deploy.yaml
+Create a file deploy.yaml with the contents from your README and apply it:
+
+kubectl apply -f deploy.yaml
+This deploys the php-apache app and a corresponding ClusterIP service.
+
+
+✅ 3. Enable Metrics Server (if not already running)
+Install metrics server from official GitHub:
+
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+Then, verify it's working:
+
+kubectl get apiservices | grep metrics
+kubectl top nodes
+kubectl top pods
+Wait for a bit if top returns empty – it might take a minute or two to collect initial metrics.
+
